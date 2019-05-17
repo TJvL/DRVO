@@ -10,9 +10,8 @@ static int my_init(void) {
   return 0;
 }
 
-static int my_exit(void) {
+static void my_exit(void) {
   printk (KERN_INFO "The module has been unloaded.");
-  return 0;
 }
 
 module_init (my_init);
