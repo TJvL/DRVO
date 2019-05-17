@@ -5,12 +5,12 @@
 int number = 666;
 module_param(number, int, 0);
 
-static int __init my_init(void) {
+static int my_init(void) {
   printk (KERN_INFO "The module has been loaded with number: %p.\n", number);
   return 0;
 }
 
-static int __exit my_exit(void) {
+static int my_exit(void) {
   printk (KERN_INFO "The module has been unloaded.");
   return 0;
 }
